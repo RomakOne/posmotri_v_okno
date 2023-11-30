@@ -168,7 +168,16 @@ ol {
   cursor: pointer;
 }
 
-/*конфликтуют два состояния. не могу добиться чтобы при фокусе был бордер а при фокус-виз обводка с отступом*/
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+/*конфликтуют два состояния. не могу добиться чтобы при фокусе был бордер а при фокус-виз обводка с отступом
 .search-form__textfield:focus {
   outline: 1px solid #fff;
   outline-offset: -1px;
@@ -178,7 +187,7 @@ ol {
 .search-form__textfield:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
+}*/
 
 .search-form__textfield {
   width: 225px;
@@ -252,6 +261,10 @@ input::placeholder {
 
 .button:active {
   background: #545050;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
