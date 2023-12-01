@@ -41,14 +41,15 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   gap: 30px;
   max-width: 1140px;
+  min-height: 534px;
   margin: auto;
 }
 
 .result {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
   gap: 16px;
 }
@@ -76,6 +77,7 @@ ol {
 
 .content__details {
   width: 100%;
+  min-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -144,6 +146,8 @@ ol {
   width: 100%;
 }
 
+/*Inputs & Chackbox*/
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -169,12 +173,9 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible{
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: -1px;
+  caret-color:#FFF;
 }
 
 /*конфликтуют два состояния. не могу добиться чтобы при фокусе был бордер а при фокус-виз обводка с отступом
@@ -232,12 +233,7 @@ input::placeholder {
   text-decoration: underline;
 }
 
-/* не смог разобраться. не понимаю почему нет обводки у этого элемента
-.search-form__label:focus-visible {
-  outline: 1px solid red;
-  outline-offset: 1px;
-}
-*/
+/*Buttons*/
 
 .button-link {
   display: flex;
@@ -280,13 +276,7 @@ input::placeholder {
   width: 100%;
 }
 
-.result__video-container {
-  position: relative;
-}
-
-.content__list {
-  position: relative;
-}
+/*Content cards*/
 
 .content__list-item:focus {
   outline: none;
@@ -302,6 +292,16 @@ input::placeholder {
 
 .content__card-link_current {
   background-color: #545050;
+}
+
+/*Loader*/
+
+.result__video-container {
+  position: relative;
+}
+
+.content__list {
+  position: relative;
 }
 
 /*.pixel-perfect-image {
